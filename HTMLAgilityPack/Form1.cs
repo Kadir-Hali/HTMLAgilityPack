@@ -28,14 +28,14 @@ namespace HTMLAgilityPack
             var bilgi = dokuman.DocumentNode.SelectNodes("//*[@id=\"product-detail-app\"]/div/section/div/div/div").First().InnerText;
             var urunOzellikleri = dokuman.DocumentNode.SelectNodes("//*[@id=\"product-detail-app\"]/div/section/div/ul").First().InnerText;
             //var urunAciklaması = dokuman.DocumentNode.SelectNodes("//*[@id=\"urun-aciklamasi\"]/div").First().InnerText;
-            var picLink = dokuman.DocumentNode.SelectSingleNode("//*[@id=\"product-detail-app\"]/div/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/div/img").Attributes["src"].Value;
+            var picLink = dokuman.DocumentNode.SelectSingleNode("//*[@id=\"product-detail-app\"]/div/div[2]/div[1]/div[2]/div[1]/div/div[2]/div/div[1]/img").Attributes["src"].Value;
             //var imageStream = HttpWebRequest.Create(imagePath).GetResponse().GetResponseStream();
             //this.pictureBox1.Image=Image.FromStream(imageStream);
             listBox1.Items.Add("Ürün Adı : " + baslik);
             listBox1.Items.Add("Marka : " + marka);
             listBox1.Items.Add("Ürün Bilgileri : " + bilgi);
             listBox1.Items.Add("Ürün Özellikleri : " + urunOzellikleri);
-            //listBox1.Items.Add("Ürün Açıklaması : " + urunAciklaması); TÜM ÜRÜNLERDE BU ALAN YOK!
+            //listBox1.Items.Add("Ürün Açıklaması : " + urunAciklaması);// TÜM ÜRÜNLERDE BU ALAN YOK!
             listBox1.Items.Add("Ürün Foto Linki : " + picLink);
         }
     }
